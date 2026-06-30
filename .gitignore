@@ -4,3 +4,13 @@ __pycache__/
 *.db
 .pytest_cache/
 .vscode/
+.env
+venv/
+*.py[cod]
+*.sqlite
+*.sqlite3
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.DS_Store
