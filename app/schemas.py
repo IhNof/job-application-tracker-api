@@ -46,14 +46,25 @@ class ApplicationUpdate(BaseModel):
 
     salary_min: int | None = Field(default=None, ge=0)
     salary_max: int | None = Field(default=None, ge=0)
-
     notes: str | None = None
+
+    external_id: str | None = None
+    vacancy_url: str | None = None
+    found_vacancy_id: int | None = None
+    currency: str | None = None
+    salary_gross: bool | None = None
 
 
 class ApplicationRead(ApplicationBase):
     id: int
     created_at: datetime
     updated_at: datetime
+
+    external_id: str | None = None
+    vacancy_url: str | None = None
+    found_vacancy_id: int | None = None
+    currency: str | None = None
+    salary_gross: bool | None = None
 
     model_config = {
         "from_attributes": True
